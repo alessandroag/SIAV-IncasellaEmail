@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace SIAV_IncasellaEmail
 {
@@ -15,6 +16,8 @@ namespace SIAV_IncasellaEmail
             if (!string.IsNullOrEmpty(emailAddress))
             {
                 // Create a folder with the email address as its name (if it doesn't exist already)
+                //MessageBox.Show(directoryOutputPath + " " + emailAddress);
+                emailAddress = emailAddress.Replace("\"", "");
                 string folderEmailPath = Path.Combine(directoryOutputPath, emailAddress);
                 if (!Directory.Exists(folderEmailPath))
                 {

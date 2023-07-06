@@ -24,7 +24,7 @@
         <TextBox x:Name="txtOutputDirectory" HorizontalAlignment="Left" Margin="153,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="600" Height="20"/>
         <Button Content="Seleziona&#xA;Cartella Output" HorizontalAlignment="Left" Margin="29,120,0,0" VerticalAlignment="Top" Height="48" Width="95" Click="Select_output_folder"/>
         <Label Content="Cartella output:" HorizontalAlignment="Left" Margin="152,108,0,0" VerticalAlignment="Top" Width="140"/>
-        <Button x:Name="SaveConfig" Content="Salva Percorsi" HorizontalAlignment="Left" Margin="676,10,0,0" VerticalAlignment="Top" Height="39" Click="SaveConfig_Click"/>
+        <Button x:Name="SaveConfig" Content="Salva Percorsi" HorizontalAlignment="Left" Margin="676,10,0,0" VerticalAlignment="Top" Height="39" Click="SaveConfig_Click" Visibility="Hidden"/>
 
     </Grid>
 </Window>

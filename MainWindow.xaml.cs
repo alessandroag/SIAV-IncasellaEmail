@@ -4,11 +4,7 @@ using System.Windows;
 using System.Collections.Generic;
 using System;
 using System.Text.RegularExpressions;
-using System.Runtime;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using System.Dynamic;
-using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -28,7 +24,7 @@ namespace SIAV_IncasellaEmail
         public MainWindow()
         {
             InitializeComponent();
-
+            /*
             var configBuilder = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
@@ -37,7 +33,7 @@ namespace SIAV_IncasellaEmail
             // Get input and output directory paths from configuration
             string inputDirectoryPath = configuration["InputDirectoryPath"];
             string outputDirectoryPath = configuration["OutputDirectoryPath"];
-
+            
             // Set the text of the corresponding TextBox controls
             txtDirectory.Text = inputDirectoryPath;
             txtOutputDirectory.Text = outputDirectoryPath;
@@ -50,7 +46,7 @@ namespace SIAV_IncasellaEmail
 
                 directoryErroriPath = Path.Combine(txtDirectory.Text, "ERRORI");
             }
-
+            */
 
         }
 

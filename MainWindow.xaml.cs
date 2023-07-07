@@ -128,18 +128,25 @@ namespace SIAV_IncasellaEmail
 
                 //CHECK
                 emailAddressesList = HelperFunctions.Check_SecondoTipo_MultiMail_ListaCSV_ReturnList(emlFile, directoryOutputPath);
+                Boolean IsOK = false;
                 if (emailAddressesList.Count > 0)
                 {
                     foreach (string emailAddressInList in emailAddressesList)
                     {
                         if (allowedEmailAddresses.Any(element => element.Equals(emailAddressInList, StringComparison.OrdinalIgnoreCase))){
                             HelperGestisciEML.IncasellaEmail(emailAddressInList, emlFile, directoryOutputPath);
+                            IsOK = true;
+
                         }
-                        else
+                        /*else
                         {
                             HelperGestisciEML.IncasellaEmail(emailAddressInList, emlFile, directoryErroriPath);
-                        }
+                        }*/
+
                        
+                    }
+                    if (IsOK == false) {
+                        HelperGestisciEML.IncasellaEmail("errore@errore.it", emlFile, directoryErroriPath);
                     }
                 }
                 else
